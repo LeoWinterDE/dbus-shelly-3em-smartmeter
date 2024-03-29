@@ -2,6 +2,7 @@
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}"  )" &> /dev/null && pwd  )
 DAEMON_NAME=${SCRIPT_DIR##*/}
 RC_FILE_PATH=/data/rc.local
+STARTUP=$SCRIPT_DIR/install.sh
 
 rm /service/$DAEMON_NAME
 kill $(pgrep -f "python $SCRIPT_DIR/$DAEMON_NAME")
